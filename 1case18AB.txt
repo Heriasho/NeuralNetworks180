@@ -1,6 +1,6 @@
-//Case 15
-//Part 1 A&B - Topology: Same as case 9, Momentum -> 0.85
-//Compare with case 9
+//Case 18
+//Part 1 A&B - Topology: Same as case 9, Momentum -> 0.84
+//Compare with case 15
 // NN parameters  ------------------------------------------------
 #define NumINs       3       // number of inputs, not including bias node
 #define NumOUTs      2       // number of outputs, not including bias node
@@ -8,7 +8,7 @@
 #define TestCriteria 0.02     // all testing outputs must be within this for generalization
 
 #define LearningRate 0.3     // most books suggest 0.3 as a starting point
-#define Momentum     0.85    // must be >=0 and <1
+#define Momentum     0.84    // must be >=0 and <1
 #define bias        -1      // output value of bias node (usually 1, sometimes -1 for sigmoid)
 #define weightInit   1.00    // weights are initialized randomly with this max magnitude
 #define MaxIterate   1000000 // maximum number of iterations before giving up training
@@ -37,14 +37,15 @@
 #define TestCases    50            // number of test cases
 
 //Produced result:
-Sum Squared Error for Training cases   = 0.0217
-% of Training Cases that meet criteria  = 0.0500
+Sum Squared Error for Training cases   = 0.0219
+% of Training Cases that meet criteria  = 0.0800
 
-Sum Squared Error for Testing cases     = 0.1891
-% of Testing Cases that meet criteria    = 0.0200
+Sum Squared Error for Testing cases     = 0.2203
+% of Testing Cases that meet criteria    = 0.0900
 
 //After thoughts -------------------------------------
-For errors, 64% weaker on training, 44% better on testing.
-For criteria, 2.5x better on training, 28% worse on testing.
-Marginally better than case 9
+For errors, 1x better on training, 1.6x better on testing.
+For criteria, 1.16x worse on training, 4.5x better on testing.
+Better than case 9 and 15
+
 

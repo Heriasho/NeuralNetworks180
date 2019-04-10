@@ -1,5 +1,6 @@
 //Case 9
-//Part 1 A&B - Sig with 2 activations, act2 with sig and act3 with sig. Subtract 1 hidden layer at NumNodes2. (Compare with case 2 and case 8)
+//Part 1 A&B - Sig with 2 activations, act2 with sig and act3 with sig. Subtract 1 hidden layer at NumNodes2. 
+//Compare with case 2
 // NN parameters  ------------------------------------------------
 #define NumINs       3       // number of inputs, not including bias node
 #define NumOUTs      2       // number of outputs, not including bias node
@@ -45,4 +46,5 @@ Sum Squared Error for Testing cases     = 0.4224
 //After thoughts -------------------------------------
 Performed 24% better on training and 62% better on testing error cases compared to default case 2.
 Performed 50% worse on meeting criteria for training and 7x better on testing.
+Better than case 2
 

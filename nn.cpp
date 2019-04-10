@@ -23,7 +23,7 @@ using namespace std;
 #define TestCriteria 0.02     // all testing outputs must be within this for generalization
 
 #define LearningRate 0.3     // most books suggest 0.3 as a starting point
-#define Momentum     0.95    // must be >=0 and <1
+#define Momentum     0.80    // must be >=0 and <1
 #define bias        -1      // output value of bias node (usually 1, sometimes -1 for sigmoid)
 #define weightInit   1.00    // weights are initialized randomly with this max magnitude
 #define MaxIterate   1000000 // maximum number of iterations before giving up training
@@ -31,9 +31,9 @@ using namespace std;
 
 // network topology ----------------------------------------------
 #define NumNodes1    4       // col 1 - must equal NumINs+1 (extra node is bias node)
-#define NumNodes2    19      // col 2 - hidden layer 1, etc.
+#define NumNodes2    20      // col 2 - hidden layer 1, etc.
 #define NumNodes3    2       // output layer is last non-zero layer, and must equal NumOUTs
-#define NumNodes4    2       // note - last node in input and hidden layers will be used as bias
+#define NumNodes4    0       // note - last node in input and hidden layers will be used as bias
 #define NumNodes5    0       // note - there is no bias node in the output layer
 #define NumNodes6    0
 #define Activation1    0     // use activation=0 for input (first) layer and for unused laters

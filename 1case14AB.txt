@@ -18,7 +18,7 @@
 #define NumNodes1    4       // col 1 - must equal NumINs+1 (extra node is bias node)
 #define NumNodes2    19      // col 2 - hidden layer 1, etc.
 #define NumNodes3    2       // output layer is last non-zero layer, and must equal NumOUTs
-#define NumNodes4    1       // note - last node in input and hidden layers will be used as bias
+#define NumNodes4    2       // note - last node in input and hidden layers will be used as bias
 #define NumNodes5    0       // note - there is no bias node in the output layer
 #define NumNodes6    0
 #define Activation1    0     // use activation=0 for input (first) layer and for unused laters
