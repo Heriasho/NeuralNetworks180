@@ -1,0 +1,47 @@
+//Case 8
+//Part 1 A&B - Sig with 2 activations, act2 with sig and act3 with sig. Add 1 hidden layer at NumNodes2. (Compare with case 2 and case 9)
+// NN parameters  ------------------------------------------------
+#define NumINs       3       // number of inputs, not including bias node
+#define NumOUTs      2       // number of outputs, not including bias node
+#define Criteria     0.01   // all training outputs must be within this for training to stop
+#define TestCriteria 0.02     // all testing outputs must be within this for generalization
+
+#define LearningRate 0.3     // most books suggest 0.3 as a starting point
+#define Momentum     0.95    // must be >=0 and <1
+#define bias        -1      // output value of bias node (usually 1, sometimes -1 for sigmoid)
+#define weightInit   1.00    // weights are initialized randomly with this max magnitude
+#define MaxIterate   1000000 // maximum number of iterations before giving up training
+#define ReportIntv   101    // print report every time this many training cases done
+
+// network topology ----------------------------------------------
+#define NumNodes1    4       // col 1 - must equal NumINs+1 (extra node is bias node)
+#define NumNodes2    21      // col 2 - hidden layer 1, etc.
+#define NumNodes3    2       // output layer is last non-zero layer, and must equal NumOUTs
+#define NumNodes4    0       // note - last node in input and hidden layers will be used as bias
+#define NumNodes5    0       // note - there is no bias node in the output layer
+#define NumNodes6    0
+#define Activation1    0     // use activation=0 for input (first) layer and for unused laters
+#define Activation2    1     // Specify desired activation function for hidden and output layers
+#define Activation3    1     // 1=sig, 2=tanh, 3=relu, 4=leakyRelu, 5=linear
+#define Activation4    0
+#define Activation5    0
+#define Activation6    0
+#define NumOfCols    3       // number of non-zero layers specified above, including the input layer
+#define NumOfRows    20      // largest layer - i.e., max number of rows in the network
+
+// data files -----------------------------------------------
+#define TrainFile    "1BeamA.dat"  // file containing training data
+#define TestFile     "1BeamB.dat"  // file containing testing data 
+#define TrainCases   50           // number of training cases
+#define TestCases    50            // number of test cases
+
+//Produced result:
+Sum Squared Error for Training cases   = 27.0432
+% of Training Cases that meet criteria  = 0.0000
+
+Sum Squared Error for Testing cases     = 35.7985
+% of Testing Cases that meet criteria    = 0.0000
+
+//After thoughts -------------------------------------
+Adding an extra hidden layer at NumNode2 dramatically weakens the training and testing results.
+

@@ -31,13 +31,13 @@ using namespace std;
 
 // network topology ----------------------------------------------
 #define NumNodes1    4       // col 1 - must equal NumINs+1 (extra node is bias node)
-#define NumNodes2    20      // col 2 - hidden layer 1, etc.
+#define NumNodes2    19      // col 2 - hidden layer 1, etc.
 #define NumNodes3    2       // output layer is last non-zero layer, and must equal NumOUTs
 #define NumNodes4    0       // note - last node in input and hidden layers will be used as bias
 #define NumNodes5    0       // note - there is no bias node in the output layer
 #define NumNodes6    0
 #define Activation1    0     // use activation=0 for input (first) layer and for unused laters
-#define Activation2    3     // Specify desired activation function for hidden and output layers
+#define Activation2    1     // Specify desired activation function for hidden and output layers
 #define Activation3    1     // 1=sig, 2=tanh, 3=relu, 4=leakyRelu, 5=linear
 #define Activation4    0
 #define Activation5    0
